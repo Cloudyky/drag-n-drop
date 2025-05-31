@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.left {
+  width: 200px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.draggable {
+  background: #4CAF50;
+  color: white;
+  padding: 8px;
+  margin: 10px 0;
+  cursor: grab;
+  border-radius: 5px;
+}
+
+.brands {
+  display: flex;
+  gap: 20px;
+}
+
+.brand-drop {
+  width: 250px;
+  border: 2px dashed #999;
+  padding: 10px;
+  min-height: 200px;
+}
+
+.car {
+  background: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.customer-drop {
+  min-height: 80px;
+  background: #eee;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.customer-box {
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #2196F3;
+  color: white;
+  border-radius: 5px;
+}
+
+.payment-drop {
+  border: 2px solid red;
+  padding: 20px;
+  width: 250px;
+  min-height: 150px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Car Dealer Drag & Drop</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="navbar">
+    <h1>Car Dealer Simulator</h1>
+  </div>
+
+  <div class="container">
+    <div class="left">
+      <h2>Customers</h2>
+    </div>
+
+    <div class="brands">
+      <div class="brand-drop" data-brand="audi">
+        <h3>Audi</h3>
+        <div class="car">Audi R8</div>
+        <div class="customer-drop" data-brand="audi">Drop Customer Here</div>
+      </div>
+      <div class="brand-drop" data-brand="porsche">
+        <h3>Porsche</h3>
+        <div class="car">Porsche 911</div>
+        <div class="customer-drop" data-brand="porsche">Drop Customer Here</div>
+      </div>
+    </div>
+
+    <div class="payment-drop">
+      <h2>Payment</h2>
+      <p>Drag full car with customer here to confirm deal</p>
+    </div>
+  </div>
+</body>
+</html>
