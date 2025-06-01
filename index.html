@@ -1,39 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Car Dealer Drag & Drop</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car Dealer Simulator</title>
+  <link rel="stylesheet" href="style.css" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="navbar">
-    <h1>Car Dealer Simulator</h1>
-  </div>
+  <div class="navbar">Car Dealer Simulator</div>
+  <div id="sales-bar">Total Sales: RM <span id="sales-amount">0</span></div>
 
   <div class="container">
-    <div class="left">
-      <h2>Customers</h2>
+    <div class="queue-area">
+      <h2>Customer Queue</h2>
+      <div id="customer-queue"></div>
     </div>
 
-    <div class="brands">
-      <div class="brand-drop" data-brand="audi">
+    <div class="brand-area">
+      <div class="brand-slot" id="audi-slot">
         <h3>Audi</h3>
-        <div class="car">Audi R8</div>
-        <div class="customer-drop" data-brand="audi">Drop Customer Here</div>
+        <div class="customer-slot" id="audi-cars"></div>
       </div>
-      <div class="brand-drop" data-brand="porsche">
+      <div class="brand-slot" id="porsche-slot">
         <h3>Porsche</h3>
-        <div class="car">Porsche 911</div>
-        <div class="customer-drop" data-brand="porsche">Drop Customer Here</div>
+        <div class="customer-slot" id="porsche-cars"></div>
       </div>
     </div>
 
-    <div class="payment-drop">
-      <h2>Payment</h2>
-      <p>Drag full car with customer here to confirm deal</p>
+    <div class="payment-exit-area">
+      <div class="payment-area" id="payment-area">
+        <h3>Payment</h3>
+      </div>
+      <div class="exit-area" id="exit-area">
+        <h3>Exit</h3>
+      </div>
     </div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
