@@ -6,11 +6,11 @@ $(document).ready(function () {
     function generateCustomer(n) {
         const brand = customerBrands[Math.floor(Math.random() * customerBrands.length)];
         const customer = $("<div>")
-        .addClass("draggable customer")
-        .attr("id", "cust" + n)
-        .attr("draggable", "true")
-        .attr("data-brand", brand.toLowerCase())
-        .text("Customer: " + brand + " " + n);
+            .addClass("draggable customer")
+            .attr("id", "cust" + n)
+            .attr("draggable", "true")
+            .attr("data-brand", brand.toLowerCase())
+            .text("Customer: " + brand + " " + n);
         $(".left").append(customer);
     }
 
@@ -24,7 +24,9 @@ $(document).ready(function () {
 
     // Dragging customer only
     $(document).on("dragstart", ".customer", function (e) {
-        e.originalEvent.dataTransfer.setData("text/plain", $(this).attr("id"));
+        const id = $(this).attr("id");
+        e.originalEvent.dataTransfer.setData("text/plain", id);
+        console.log("Dragging customer:", id);
     });
 
     // Drop customer to correct brand section
@@ -54,7 +56,7 @@ $(document).ready(function () {
             generateCustomer(customerCount);
         }
         } else {
-        alert("Customer only wants a " + $customer.data("brand"));
+            alert("Customer only wants a " + $customer.data("brand"));
         }
     });
 
